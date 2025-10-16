@@ -8,8 +8,8 @@ import {
 } from 'react-icons/fa';
 import API from '../api/axios';
 // import StartupCards from '../components/StartupCards';
-import EmptyState from '../Components/EmptyState'
-import StartupCardSkeleton from '../Components/StartupCardSkeleton';
+import EmptyState from '../components/EmptyState'
+import StartupCardSkeleton from '../components/StartupCardSkeleton';
 
 
 const FounderProfile = () => {
