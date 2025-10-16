@@ -4,10 +4,13 @@ import axios from 'axios';
 const API = axios.create({
   baseURL:
     process.env.NODE_ENV === 'production'
-      ? import.meta.env.VITE_API_URL || 'https://launchpad-deploy.onrender.com'
+      ? import.meta.env.VITE_API_BASE_URL || 'https://launchpad-deploy.onrender.com'
       : 'http://localhost:3000/api/v1',
   withCredentials: true, // Keep this if you're using cookies/sessions
 });
+
+// Debugging
+console.log("VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
 
 // Attach token if present
 API.interceptors.request.use((config) => {
